@@ -1,0 +1,36 @@
+{
+    "clientes": [
+        {
+        "id": 1,
+        "nome": "Laura Santos",
+        "cpf": "123.123.123-23",
+        "tel": "(48) 99999-9999",
+        "email": "laura-santos@teste.com",
+        "endereco": [{
+            "tipo":"residencial",
+            "principal": true,
+            "cep": "88161-000",
+            "cidade": "São Paulo",
+            "uf": "SP",
+            "bairro":"Guaruja",
+            "rua":"Rua numero um",
+            "num": 10,
+            "complemento":""
+            },
+            {
+            "tipo":"comercial",
+            "principal": false,
+            "cep": "88171-000",
+            "cidade": "São Paulo",
+            "uf": "SP",
+            "bairro":"Guaruja",
+            "rua":"Rua numero dois",
+            "num": 101,
+            "complemento":""
+            }
+            ]
+        
+        }
+    ]
+
+}
