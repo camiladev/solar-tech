@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
+import CreateClient from "./pages/createClient";
 import Home from "./pages/listingClient";
 
 export default function Routes(){
@@ -8,7 +9,7 @@ export default function Routes(){
         <BrowserRouter>
             <Switch>
                 <Route exact path='/' component={Home} />
-                <Route path='/cadastro' component={() => <h1>Cadastro de clientes</h1>} />
+                <Route path='/cadastro' component={CreateClient} />
 
             </Switch>
         </BrowserRouter>

@@ -129,3 +129,7 @@
 .addressDetails{
     margin-bottom: 1rem;
 }
+
+.hidden{
+    display: none;
+}
