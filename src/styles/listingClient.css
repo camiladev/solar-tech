@@ -93,6 +93,19 @@
 
     display: block;
     margin-left: auto;
+    text-align: center;
+    
+}
+.listingContainer main .card .clientDetails .look > span{
+    width: 9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.listingContainer main .card .clientDetails .look  svg{ 
+    padding-left: 0.25rem;   
+    font-size: 1rem;   
+    
 }
 
 .listingContainer main .card .clientDetails .address{

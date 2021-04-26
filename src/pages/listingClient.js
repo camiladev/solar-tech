@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Layout from "../components/layout";
+import { FaAngleRight, FaAngleDown, FaTrashAlt, FaUserEdit } from "react-icons/fa";
 
 import '../styles/listingClient.css'
 
@@ -27,7 +28,7 @@ export default function ListingClient(){
                                 <span>(00) 99999-9999</span>
                                 <span>camila.matos@teste.com</span>
                             </div>
-                            <span className='look'>Ver Endereço</span>
+                            <span className='look'> <span>Ver Endereço <FaAngleRight /></span></span>
                             <div className='address'>
                                 <p>
                                     <span><span>Endereço</span> Principal</span>
@@ -46,8 +47,8 @@ export default function ListingClient(){
                         </div>
 
                         <div className="buttons">
-                            <span>X</span>
-                            <span>X</span>
+                            <span><FaUserEdit /></span>
+                            <span><FaTrashAlt /></span>
                         </div>
 
                     </li>
