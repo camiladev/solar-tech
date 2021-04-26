@@ -125,3 +125,7 @@
 .listingContainer main .card .clientDetails .address p > span > span{
     font-weight: 600;
 }
+
+.addressDetails{
+    margin-bottom: 1rem;
+}
