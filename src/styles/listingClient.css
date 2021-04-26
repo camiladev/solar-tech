@@ -1,0 +1,114 @@
+.listingContainer{
+    width: 100%;
+}
+
+.listingContainer header{
+    width: 100%;
+    margin-bottom: 2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.listingContainer header button{
+    height: 40px;
+    padding: 0 2rem;
+
+    background: #003F63;
+    color: #D9D9D9;
+    font-weight: 500;
+}
+
+/* Cards */
+
+.listingContainer main .card{
+    border: 1px solid #003F63;
+    border-radius: 20px;
+
+    padding: 1rem;
+
+    background: white;
+
+    position: relative;
+}
+
+.listingContainer main .card .buttons{
+    position: absolute;
+    top: 0.5rem;
+    right: 1.5rem;
+    font-size: 1.25rem;
+
+    
+}
+
+.listingContainer main .card .buttons span{
+    cursor: pointer;
+}
+.listingContainer main .card .buttons span:hover{
+    color: #003F63;
+}
+
+.listingContainer main .card .buttons span:first-child{
+    margin-right: 0.5rem;
+}
+
+.listingContainer main .card .data h3{
+    font-size: 1.25rem;
+    max-width: 70%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.listingContainer main .card .data span{
+    color: #353D40;
+
+    display: inline-block;
+}
+
+.listingContainer main .card .data span + span{
+    margin-left: 0.5rem;
+    padding-left: 0.5rem;
+    position: relative;
+}
+
+.listingContainer main .card .data span + span::after{
+    content: '';
+    width: 4px;
+    height: 4px;
+    border-radius: 2px;
+    background: #353D40;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.listingContainer main .card .clientDetails .look{
+    width: 9rem;
+    line-height: 1.75rem;
+    font-size: 0.87rem;
+    cursor: pointer;
+
+    display: block;
+    margin-left: auto;
+}
+
+.listingContainer main .card .clientDetails .address{
+
+    border-top: 1px dashed #353D40;
+    padding-top: 1rem;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.listingContainer main .card .clientDetails .address p > span:first-child{
+    margin-right: 0.5rem;
+    
+}
+
+.listingContainer main .card .clientDetails .address p > span > span{
+    font-weight: 600;
+}

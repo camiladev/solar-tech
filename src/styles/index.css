@@ -41,3 +41,7 @@ h2{
 button{
   cursor: pointer;
 }
+
+ul{
+  list-style: none;
+}

@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import Layout from "../components/layout";
 
+import '../styles/listingClient.css'
+
 
 export default function ListingClient(){
 
@@ -21,24 +23,30 @@ export default function ListingClient(){
                         <div className="clientDetails">
                             <div className='data'>
                                 <h3>Camila Matos</h3>
-                                <p>000.000.000-00</p>
+                                <span>000.000.000-00</span>
                                 <span>(00) 99999-9999</span>
                                 <span>camila.matos@teste.com</span>
                             </div>
-                            <span>Ver Endereço</span>
+                            <span className='look'>Ver Endereço</span>
                             <div className='address'>
-                                <p>Endereço:</p>
-                                <span>Residencial</span>
-                                <span>Principal</span>
+                                <p>
+                                    <span><span>Endereço</span> Principal</span>
+                                    <span><span>Tipo:</span> Residencial</span>
+                                </p>
                                 <span>Rua das Palmeiras, nº 10</span>
-                                <span>Bairro: Oliveira</span>
-                                <span>São José/SC</span>
+                                <p>
+                                    <span><span>Bairro:</span> Oliveira</span>
+                                    <span><span>Cidade/UF:</span>São José/SC</span>
+
+                                </p>
+                                
 
                             </div>
 
                         </div>
 
                         <div className="buttons">
+                            <span>X</span>
                             <span>X</span>
                         </div>
 
