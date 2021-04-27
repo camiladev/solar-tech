@@ -45,7 +45,7 @@ export default function ListingClient(){
                 <ul>
                     {clientList?.length === 0 && <div>Carregando dados dos clientes...</div>}
                     {clientList?.map( client => {
-                        // console.log('Achando o endereço ', client.endereco)
+                         
                         return(
                             <li className="card" key={client.id}>
                                 <div className="clientDetails">
@@ -60,23 +60,30 @@ export default function ListingClient(){
                                     
                                         <div className="address">
                                             { client.endereco.map( end => {
-                                                const rua = [end.rua, end.num].join(', nº')
-                                                const cidade = [end.cidade, end.uf].join('/')
-                                                return(
-                                                    <div className='addressDetails' key={rua}>
-                                                        <p>
-                                                            <span><span>Endereço</span>{ end.principal ? ' Principal': ' Secundário' }</span>
-                                                            <span><span>Tipo:</span> {end.tipo}</span>
-                                                        </p>
-                                                        <span>{rua}</span>
-                                                        <p>
-                                                            <span><span>Bairro:</span> {end.bairro}</span>
-                                                            <span><span>Cidade/UF:</span>{cidade}</span>
+                                                const enderecos = end[0].map( e => {
+                                                    console.log('Achando o endereço ', e.rua)
+                                                        const rua = [e.rua, e.num].join(', nº')
+                                                        const cidade = [e.cidade, e.uf].join('/')
+                                                        return(
+                                                            <div className='addressDetails' key={rua}>
+                                                                <p>
+                                                                    <span><span>Endereço</span>{ e.principal ? ' Principal': ' Secundário' }</span>
+                                                                    <span><span>Tipo:</span> {e.tipo}</span>
+                                                                </p>
+                                                                <span>{rua}</span>
+                                                                <p>
+                                                                    <span><span>Bairro:</span> {e.bairro}</span>
+                                                                    <span><span>Cidade/UF:</span>{cidade}</span>
 
-                                                        </p>
-                                                    
-                                                    </div>
-                                                )
+                                                                </p>
+                                                            
+                                                            </div>
+                
+
+                                                        )
+
+                                                })
+                                                return enderecos
                                             })}
                                             
 

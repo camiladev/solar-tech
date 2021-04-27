@@ -41,7 +41,7 @@ export function ClientProvider({ children }){
                 cpf: addClient.cpf,
                 tel: addClient.tel,
                 email: addClient.email,
-                endereco: addAddress
+                endereco: [addAddress]
             })
             alert('Cliente Cadastrado')
         } catch (error) {
