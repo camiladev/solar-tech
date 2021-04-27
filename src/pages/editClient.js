@@ -7,12 +7,13 @@ import '../styles/form.css'
 import { Link } from "react-router-dom";
 import { useClient } from "../contexts/ClientContext";
 
-export default function CreateClient(){
+export default function UpdateClient(){
     const { addClient,
             addAddress, 
             handleOnChangeClient,
             handleOnChangeAddress,
             handleSubmit,
+           
 
         } = useClient()
 
@@ -33,7 +34,7 @@ export default function CreateClient(){
                         
                         </Link>
                     </span>
-                    <h1>Adicionar Cliente</h1>                    
+                    <h1>Editar Cliente</h1>                    
                 </header>
 
                 <main>

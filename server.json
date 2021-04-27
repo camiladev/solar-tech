@@ -32,27 +32,6 @@
       ]
     },
     {
-      "addClient": {
-        "nome": "Camila",
-        "cpf": "0",
-        "tel": "0",
-        "email": "camila.mila148@gmail.com"
-      },
-      "endereco": [
-        [
-          {
-            "id": "0",
-            "rua": "Rua um"
-          }
-        ],
-        {
-          "id": "1",
-          "rua": "rua dois"
-        }
-      ],
-      "id": 2
-    },
-    {
       "nome": "Camila Matos",
       "cpf": "0",
       "tel": "0",
@@ -61,19 +40,6 @@
         []
       ],
       "id": 3
-    },
-    {
-      "nome": "Camila Bittencourt",
-      "cpf": "012.957.780-41",
-      "tel": "0",
-      "email": "camila.mila148@gmail.com",
-      "endereco": [
-        {
-          "id": "0",
-          "rua": "Rua dois"
-        }
-      ],
-      "id": 4
     },
     {
       "nome": "Suzana da Silva",
@@ -107,6 +73,55 @@
         }
       ],
       "id": 6
+    },
+    {
+      "nome": "Teste",
+      "cpf": "0",
+      "tel": "0",
+      "email": "suzana-teste@teste.com",
+      "endereco": {
+        "0": {
+          "rua": "rua teste"
+        }
+      },
+      "id": 7
+    },
+    {
+      "nome": "Sandra Maria",
+      "cpf": "0",
+      "tel": "0",
+      "email": "sandra@teste.com",
+      "endereco": {
+        "0": {
+          "principal-0": "true",
+          "rua": "Rua sandra",
+          "num": "12",
+          "comp": "0",
+          "bairro": "0",
+          "cidade": "Biguaçu",
+          "uf": "SC"
+        }
+      },
+      "id": 10
+    },
+    {
+      "nome": "Camila Matos B",
+      "cpf": "0",
+      "tel": "0",
+      "email": "camila.mila148@gmail.com",
+      "endereco": {
+        "0": {
+          "principal-0": "true",
+          "selectTipo": "residencial",
+          "rua": "1",
+          "num": "1",
+          "comp": "1",
+          "bairro": "1",
+          "cidade": "1",
+          "uf": "1"
+        }
+      },
+      "id": 11
     }
   ]
 }

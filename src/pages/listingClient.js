@@ -4,22 +4,20 @@ import { FaAngleRight, FaAngleDown, FaTrashAlt, FaUserEdit } from "react-icons/f
 
 import '../styles/listingClient.css'
 import { useEffect, useState } from "react";
-import { api } from "../services/api";
+import { useClient } from "../contexts/ClientContext";
 
 
 export default function ListingClient(){
-    const [clientList, setClientList] = useState([])
+    
     const [handleVisible, setHandleVisible] = useState(false)
 
+    const { clientList, 
+            deletClient, 
+            atualizaList, 
+            updateClient } = useClient();
+
     useEffect(async () => {
-        const { data } = await api.get('clientes', {
-            params: {
-                _sort: 'nome',
-                _order: 'cresc'
-            }
-        })
-        setClientList(data)
-        console.log('api',data)
+        atualizaList()
     },[])
 
     function handleOnClickLookAddress(client){
@@ -47,7 +45,7 @@ export default function ListingClient(){
                 <ul>
                     {clientList?.length === 0 && <div>Carregando dados dos clientes...</div>}
                     {clientList?.map( client => {
-                        console.log(handleVisible.id, ', ', handleVisible.isVisible)
+                        // console.log('Achando o endereço ', client.endereco)
                         return(
                             <li className="card" key={client.id}>
                                 <div className="clientDetails">
@@ -90,8 +88,8 @@ export default function ListingClient(){
                                 </div>
 
                                 <div className="buttons">
-                                    <span><FaUserEdit /></span>
-                                    <span><FaTrashAlt /></span>
+                                    <span onClick={() => updateClient(client)}><FaUserEdit /></span>
+                                    <span onClick={() => deletClient(client.id)}><FaTrashAlt /></span>
                                 </div>
 
                             </li>
