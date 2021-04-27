@@ -4,26 +4,72 @@ import Layout from "../components/layout";
 import { FaArrowLeft, FaPlusSquare } from "react-icons/fa";
 
 import '../styles/form.css'
+import { Link } from "react-router-dom";
+import { api } from "../services/api";
 
 export default function CreateClient(){
     const [addClient, setAddClient] = useState([])
-    const [addAddress, setAddAddress] = useState([""])
+    const [addAddress, setAddAddress] = useState([])
+    const [moreAddress, setMoreAddress] = useState([""])
 
-    function addInputAddress(){
-        
-        setAddAddress([...addAddress,""])
+    function addInputAddress(){        
+        setMoreAddress([...moreAddress,""])
     }
+
+    function handleOnChangeClient(event){
+        
+        setAddClient({
+            ...addClient,
+            [event.target.name]: event.target.value
+        })
+    }
+
+    function handleOnChangeAddress(event, index){
+        addAddress[index] = {[event.target.name]: event.target.value}
+         
+        setAddAddress({
+            ...addAddress
+        })   
+
+    }
+
+    function handleSubmit(event){
+        event.preventDefault();
+
+        console.log('meus dados de endereço', addAddress)
+        
+        
+        try {
+            api.post('clientes', {
+                nome: addClient.nome,
+                cpf: addClient.cpf,
+                tel: addClient.tel,
+                email: addClient.email,
+                endereco: [addAddress]
+            })
+            alert('Cliente Cadastrado')
+        } catch (error) {
+            console.log('Oppss... não foi')
+        }
+    }
+
+    
 
     return(
         <Layout>
             <div className="formContainer">
                 <header>
-                    <span><FaArrowLeft /></span>
+                    <span>
+                        <Link to='/'>
+                            <FaArrowLeft />
+                        
+                        </Link>
+                    </span>
                     <h1>Adicionar Cliente</h1>                    
                 </header>
 
                 <main>
-                    <form className='form' action="">
+                    <form className='form' onSubmit={handleSubmit}>
                         <div className="data">
 
                             <p>
@@ -31,7 +77,9 @@ export default function CreateClient(){
                                 <input 
                                     type="text"
                                     name='nome'
-                                    placeholder='Nome'   
+                                    placeholder='Nome'
+                                    value={addClient.name}  
+                                    onChange={handleOnChangeClient} 
                                     required 
                                 />
                             </p>
@@ -41,6 +89,8 @@ export default function CreateClient(){
                                     type="text"
                                     name='cpf'
                                     placeholder='000.000.000-00'   
+                                    value={addClient.name}  
+                                    onChange={handleOnChangeClient}
                                     required 
                                 />
                             </p>
@@ -49,7 +99,9 @@ export default function CreateClient(){
                                 <input 
                                     type="text"
                                     name='tel'
-                                    placeholder='(00) 00000-0000'   
+                                    placeholder='(00) 00000-0000'
+                                    value={addClient.name}  
+                                    onChange={handleOnChangeClient}   
                                     required 
                                 />
                             </p>
@@ -58,7 +110,9 @@ export default function CreateClient(){
                                 <input 
                                     type="email"
                                     name='email'
-                                    placeholder='E-mail'   
+                                    placeholder='E-mail'  
+                                    value={addClient.name}  
+                                    onChange={handleOnChangeClient} 
                                     required 
                                 />
                             </p>
@@ -70,7 +124,7 @@ export default function CreateClient(){
                                 <span onClick={()=> addInputAddress()}><FaPlusSquare /></span>
                                 
                             </div>
-                            { addAddress.map((address, index) => {
+                            { moreAddress.map((address, index) => {
                                 return(
 
                                     <div className="dataAddress">
@@ -109,7 +163,9 @@ export default function CreateClient(){
                                             <input 
                                                 type="text"
                                                 name='rua'
-                                                placeholder='Nome da rua'   
+                                                placeholder='Nome da rua'
+                                                value={addAddress.name}   
+                                                onChange={e => handleOnChangeAddress(e, index)}
                                                 required 
                                             />
                                         </p>

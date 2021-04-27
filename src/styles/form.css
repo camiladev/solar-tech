@@ -71,6 +71,10 @@
     gap: 1rem;
 
 }
+.formContainer main .form .data > p label,
+.formContainer main .form .addressForm .dataAddress > p label{
+    line-height: 1.5rem;
+}
 
 .formContainer main .form .addressForm .dataAddress .radio{
     line-height: 1.25rem;

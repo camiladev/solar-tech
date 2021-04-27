@@ -22,6 +22,14 @@ export default function ListingClient(){
         console.log('api',data)
     },[])
 
+    function handleOnClickLookAddress(client){
+        setHandleVisible({
+            ...handleVisible,
+            id: client.id,
+            isVisible: !handleVisible.isVisible
+        })
+        
+    }
   
 
     return(
@@ -30,7 +38,7 @@ export default function ListingClient(){
             <header>
                 <h1>Clientes</h1>
 
-                <Link to=''>
+                <Link to='/cadastro'>
                     <button>Adicionar cliente</button>
                 </Link>
             </header>
@@ -49,14 +57,7 @@ export default function ListingClient(){
                                         <span>{client.tel}</span>
                                         <span>{client.email}</span>
                                     </div>
-                                    <span className='look' onClick={ () => {
-                                        setHandleVisible({
-                                            ...handleVisible,
-                                            id: client.id,
-                                            isVisible: !handleVisible.isVisible
-                                        })
-                                        console.log('click')
-                                        }}> <span>Ver Endereço <FaAngleRight /></span></span>
+                                    <span className='look' onClick={ () => handleOnClickLookAddress(client)}> <span>Ver Endereço <FaAngleRight /></span></span>
                                         {handleVisible.id === client.id && handleVisible.isVisible && 
                                     
                                         <div className="address">

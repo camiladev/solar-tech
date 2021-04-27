@@ -1,36 +1,112 @@
 {
-    "clientes": [
+  "clientes": [
+    {
+      "id": 1,
+      "nome": "Laura Santos",
+      "cpf": "123.123.123-23",
+      "tel": "(48) 99999-9999",
+      "email": "laura-santos@teste.com",
+      "endereco": [
         {
-        "id": 1,
-        "nome": "Laura Santos",
-        "cpf": "123.123.123-23",
-        "tel": "(48) 99999-9999",
-        "email": "laura-santos@teste.com",
-        "endereco": [{
-            "tipo":"residencial",
-            "principal": true,
-            "cep": "88161-000",
-            "cidade": "São Paulo",
-            "uf": "SP",
-            "bairro":"Guaruja",
-            "rua":"Rua numero um",
-            "num": 10,
-            "complemento":""
-            },
-            {
-            "tipo":"comercial",
-            "principal": false,
-            "cep": "88171-000",
-            "cidade": "São Paulo",
-            "uf": "SP",
-            "bairro":"Guaruja",
-            "rua":"Rua numero dois",
-            "num": 101,
-            "complemento":""
-            }
-            ]
-        
+          "tipo": "residencial",
+          "principal": true,
+          "cep": "88161-000",
+          "cidade": "São Paulo",
+          "uf": "SP",
+          "bairro": "Guaruja",
+          "rua": "Rua numero um",
+          "num": 10,
+          "complemento": ""
+        },
+        {
+          "tipo": "comercial",
+          "principal": false,
+          "cep": "88171-000",
+          "cidade": "São Paulo",
+          "uf": "SP",
+          "bairro": "Guaruja",
+          "rua": "Rua numero dois",
+          "num": 101,
+          "complemento": ""
         }
-    ]
-
+      ]
+    },
+    {
+      "addClient": {
+        "nome": "Camila",
+        "cpf": "0",
+        "tel": "0",
+        "email": "camila.mila148@gmail.com"
+      },
+      "endereco": [
+        [
+          {
+            "id": "0",
+            "rua": "Rua um"
+          }
+        ],
+        {
+          "id": "1",
+          "rua": "rua dois"
+        }
+      ],
+      "id": 2
+    },
+    {
+      "nome": "Camila Matos",
+      "cpf": "0",
+      "tel": "0",
+      "email": "camila.mila148@gmail.com",
+      "endereco": [
+        []
+      ],
+      "id": 3
+    },
+    {
+      "nome": "Camila Bittencourt",
+      "cpf": "012.957.780-41",
+      "tel": "0",
+      "email": "camila.mila148@gmail.com",
+      "endereco": [
+        {
+          "id": "0",
+          "rua": "Rua dois"
+        }
+      ],
+      "id": 4
+    },
+    {
+      "nome": "Suzana da Silva",
+      "cpf": "0",
+      "tel": "0",
+      "email": "suzana-teste@teste.com",
+      "endereco": [
+        {
+          "0": {
+            "rua": "Rua agora foi"
+          },
+          "1": {
+            "rua": "Rua não creio"
+          }
+        }
+      ],
+      "id": 5
+    },
+    {
+      "nome": "Zulu",
+      "cpf": "0",
+      "tel": "0",
+      "email": "zulu@teste.com",
+      "endereco": [
+        {
+          "0": [
+            {
+              "rua": "Raaa"
+            }
+          ]
+        }
+      ],
+      "id": 6
+    }
+  ]
 }
