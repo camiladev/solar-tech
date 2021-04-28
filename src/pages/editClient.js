@@ -1,4 +1,4 @@
-import { useState } from "react";
+
 import Layout from "../components/layout";
 
 import { FaArrowLeft, FaPlusSquare } from "react-icons/fa";
@@ -16,12 +16,9 @@ export default function UpdateClient(){
            
 
         } = useClient()
+    
+    
 
-    const [moreAddress, setMoreAddress] = useState([])
-
-    function addInputAddress(){        
-        setMoreAddress([...moreAddress,""])
-    }  
     
     return(
         <Layout>
@@ -88,12 +85,10 @@ export default function UpdateClient(){
                         <div className="addressForm">
                             <div className="header">
                                 <h3>Endereço</h3>
-                                
-                                <span onClick={()=> addInputAddress()}><FaPlusSquare /></span>
-                                
+                                                            
                             </div>
                             { addAddress.map((address, index) => {
-                                console.log(address)
+                                
                                 return(
 
                                     <div className="dataAddress" key={index}>
@@ -102,7 +97,7 @@ export default function UpdateClient(){
                                             <p>
                                                 <input 
                                                     type="radio"
-                                                    name={`principal-${index}`}
+                                                    name={`principal${index}`}
                                                     value={true}  
                                                     onChange={e => handleOnChangeAddress(e, index)}
                                                     required 
@@ -111,8 +106,9 @@ export default function UpdateClient(){
 
                                                 <input 
                                                     type="radio"
-                                                    name={`principal-${index}`}
+                                                    name={`principal${index}`}
                                                     value={false}  
+                                                    
                                                     onChange={e => handleOnChangeAddress(e, index)}
                                                     required 
                                                 />

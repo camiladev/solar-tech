@@ -101,7 +101,7 @@ export default function CreateClient(){
                                             <p>
                                                 <input 
                                                     type="radio"
-                                                    name={`principal-${index}`}
+                                                    name={`principal${index}`}
                                                     value={true}  
                                                     onChange={e => handleOnChangeAddress(e, index)}
                                                     required 
@@ -110,7 +110,7 @@ export default function CreateClient(){
 
                                                 <input 
                                                     type="radio"
-                                                    name={`principal-${index}`}
+                                                    name={`principal${index}`}
                                                     value={false}  
                                                     onChange={e => handleOnChangeAddress(e, index)}
                                                     required 

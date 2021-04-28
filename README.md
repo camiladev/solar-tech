@@ -12,7 +12,11 @@ Mostrar uma lista de todos os clientes cadastrados e ainda que seja possível ed
 
 ### :clipboard: Resolução
 
-Descrever funcionalidades
+As funcionaliades de CRUD foram realizadas com axios e com Context API, para que os dados pudessem ser acessados qualquer componente.
+
+Na parte da listagem utilizei uma abordagem diferente, onde os dados do cliente são mostrados de forma resumida e para ver mais o componente expande exibindo o restante dos dados.
+
+Para cada cliente é possivel ter mais de um endereço cadastrado, e por isso criei uma funcionalidade que quando acionada acrescenta mais campos de endereços para ser cadastrados. E oferecer essa função me gerou uma demanda maior de tempo para realizar, e a funcionalidade de editar os dados não está funcionando corretamente, mas irei estudar para resolver.
 
 ### :hammer_and_wrench: Tecnologias usadas
 

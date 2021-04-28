@@ -22,7 +22,7 @@ export function ClientProvider({ children }){
 
     function handleOnChangeAddress(event, index){ 
         addAddress[index] = {...addAddress[index], [event.target.name]: event.target.value}
-        console.log(event.target.value)
+        
         setAddAddress({
             ...addAddress
         })   

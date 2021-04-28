@@ -7,7 +7,7 @@
       "email": "suzana-teste@teste.com",
       "addAddress": {
         "0": {
-          "principal-0": "true",
+          "principal0": "true",
           "selectTipo": "residencial",
           "rua": "rua da casa",
           "num": "12",
@@ -17,7 +17,7 @@
           "comp": "1"
         },
         "1": {
-          "principal-1": "false",
+          "principal1": "false",
           "rua": "Rua do trabalho",
           "num": "30",
           "selectTipo": "comercial",
@@ -36,7 +36,7 @@
       "email": "marcio-teste@teste.com",
       "addAddress": {
         "0": {
-          "principal-0": "true",
+          "principal0": "true",
           "selectTipo": "residencial",
           "rua": "Rua dois",
           "num": "12",
