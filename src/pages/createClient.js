@@ -122,7 +122,7 @@ export default function CreateClient(){
                                         <p className='select'>
                                             <label htmlFor="">Tipo</label>
                                             <select name="selectTipo" id="type" onChange={e => handleOnChangeAddress(e, index)}>
-                                                <option value="default" selected>Selecione</option>
+                                                <option value="default">Selecione</option>
                                                 <option value="residencial">Residencial</option>
                                                 <option value="comercial">Comercial</option>
                                                 <option value="rural">Rural</option>
@@ -157,8 +157,7 @@ export default function CreateClient(){
                                                 type="text"
                                                 name='comp' 
                                                 value={addAddress.name}   
-                                                onChange={e => handleOnChangeAddress(e, index)}
-                                                required 
+                                                onChange={e => handleOnChangeAddress(e, index)} 
                                             />
                                         </p>
                                         <p>

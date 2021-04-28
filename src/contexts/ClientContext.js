@@ -22,7 +22,7 @@ export function ClientProvider({ children }){
 
     function handleOnChangeAddress(event, index){ 
         addAddress[index] = {...addAddress[index], [event.target.name]: event.target.value}
-        console.log('endereco', addAddress)
+        console.log(event.target.value)
         setAddAddress({
             ...addAddress
         })   
@@ -31,17 +31,14 @@ export function ClientProvider({ children }){
 
     function handleSubmit(event){
         event.preventDefault();
-
-        console.log('meus dados de endereço', addAddress)
-        
-        
+                
         try {
             api.post('clientes', {
                 nome: addClient.nome,
                 cpf: addClient.cpf,
                 tel: addClient.tel,
                 email: addClient.email,
-                endereco: [addAddress]
+                addAddress
             })
             alert('Cliente Cadastrado')
         } catch (error) {
@@ -50,7 +47,6 @@ export function ClientProvider({ children }){
     }
 
     function deletClient(id){
-        console.log("delete", id)
         try {
             api.delete(`clientes/${id}`)
             atualizaList()
@@ -72,6 +68,20 @@ export function ClientProvider({ children }){
     }
 
     function updateClient(value){
+        const enderecos = [];
+
+        for (const end in value.addAddress){
+            enderecos.push(value.addAddress[end])
+        }
+        
+        setAddAddress(enderecos)
+        setAddClient({
+            nome: value.nome,
+            cpf: value.cpf,
+            tel: value.tel,
+            email: value.email,
+            
+        })
         history.push('/editar')
     }
 

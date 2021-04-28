@@ -17,13 +17,12 @@ export default function UpdateClient(){
 
         } = useClient()
 
-    const [moreAddress, setMoreAddress] = useState([""])
+    const [moreAddress, setMoreAddress] = useState([])
 
     function addInputAddress(){        
         setMoreAddress([...moreAddress,""])
     }  
     
-
     return(
         <Layout>
             <div className="formContainer">
@@ -47,7 +46,7 @@ export default function UpdateClient(){
                                     type="text"
                                     name='nome'
                                     placeholder='Nome'
-                                    value={addClient.name}  
+                                    value={addClient.nome}  
                                     onChange={handleOnChangeClient} 
                                     required 
                                 />
@@ -58,7 +57,7 @@ export default function UpdateClient(){
                                     type="text"
                                     name='cpf'
                                     placeholder='000.000.000-00'   
-                                    value={addClient.name}  
+                                    value={addClient.cpf}  
                                     onChange={handleOnChangeClient}
                                     required 
                                 />
@@ -69,7 +68,7 @@ export default function UpdateClient(){
                                     type="text"
                                     name='tel'
                                     placeholder='(00) 00000-0000'
-                                    value={addClient.name}  
+                                    value={addClient.tel}  
                                     onChange={handleOnChangeClient}   
                                     required 
                                 />
@@ -80,7 +79,7 @@ export default function UpdateClient(){
                                     type="email"
                                     name='email'
                                     placeholder='E-mail'  
-                                    value={addClient.name}  
+                                    value={addClient.email}  
                                     onChange={handleOnChangeClient} 
                                     required 
                                 />
@@ -93,7 +92,8 @@ export default function UpdateClient(){
                                 <span onClick={()=> addInputAddress()}><FaPlusSquare /></span>
                                 
                             </div>
-                            { moreAddress.map((address, index) => {
+                            { addAddress.map((address, index) => {
+                                console.log(address)
                                 return(
 
                                     <div className="dataAddress" key={index}>
@@ -136,7 +136,7 @@ export default function UpdateClient(){
                                                 type="text"
                                                 name='rua'
                                                 placeholder='Nome da rua'
-                                                value={addAddress.name}   
+                                                value={address.rua}   
                                                 onChange={e => handleOnChangeAddress(e, index)}
                                                 required 
                                             />
@@ -147,7 +147,7 @@ export default function UpdateClient(){
                                                 type="text"
                                                 name='num'
                                                 placeholder='Numero'   
-                                                value={addAddress.name}   
+                                                value={address.num}   
                                                 onChange={e => handleOnChangeAddress(e, index)}
                                                 required 
                                             />
@@ -157,9 +157,9 @@ export default function UpdateClient(){
                                             <input 
                                                 type="text"
                                                 name='comp' 
-                                                value={addAddress.name}   
+                                                value={address.comp}   
                                                 onChange={e => handleOnChangeAddress(e, index)}
-                                                required 
+                                                 
                                             />
                                         </p>
                                         <p>
@@ -168,7 +168,7 @@ export default function UpdateClient(){
                                                 type="text"
                                                 name='bairro'
                                                 placeholder='Bairro'
-                                                value={addAddress.name}   
+                                                value={address.bairro}   
                                                 onChange={e => handleOnChangeAddress(e, index)}   
                                                 required 
                                             />
@@ -180,7 +180,7 @@ export default function UpdateClient(){
                                                 type="text"
                                                 name='cidade'
                                                 placeholder='Cidade'   
-                                                value={addAddress.name}   
+                                                value={address.cidade}   
                                                 onChange={e => handleOnChangeAddress(e, index)}
                                                 required 
                                             />
@@ -191,7 +191,7 @@ export default function UpdateClient(){
                                                 type="text"
                                                 name='uf'
                                                 placeholder='UF'   
-                                                value={addAddress.name}   
+                                                value={address.uf}   
                                                 onChange={e => handleOnChangeAddress(e, index)}
                                                 required 
                                             />

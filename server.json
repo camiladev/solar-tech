@@ -1,100 +1,44 @@
 {
   "clientes": [
     {
-      "id": 1,
-      "nome": "Laura Santos",
-      "cpf": "123.123.123-23",
-      "tel": "(48) 99999-9999",
-      "email": "laura-santos@teste.com",
-      "endereco": [
-        {
-          "tipo": "residencial",
-          "principal": true,
-          "cep": "88161-000",
-          "cidade": "São Paulo",
-          "uf": "SP",
-          "bairro": "Guaruja",
-          "rua": "Rua numero um",
-          "num": 10,
-          "complemento": ""
-        },
-        {
-          "tipo": "comercial",
-          "principal": false,
-          "cep": "88171-000",
-          "cidade": "São Paulo",
-          "uf": "SP",
-          "bairro": "Guaruja",
-          "rua": "Rua numero dois",
-          "num": 101,
-          "complemento": ""
-        }
-      ]
-    },
-    {
-      "nome": "Camila Matos",
-      "cpf": "0",
-      "tel": "0",
-      "email": "camila.mila148@gmail.com",
-      "endereco": [
-        []
-      ],
-      "id": 3
-    },
-    {
       "nome": "Suzana da Silva",
       "cpf": "0",
       "tel": "0",
       "email": "suzana-teste@teste.com",
-      "endereco": [
-        {
-          "0": {
-            "rua": "Rua agora foi"
-          },
-          "1": {
-            "rua": "Rua não creio"
-          }
-        }
-      ],
-      "id": 5
-    },
-    {
-      "nome": "Zulu",
-      "cpf": "0",
-      "tel": "0",
-      "email": "zulu@teste.com",
-      "endereco": [
-        {
-          "0": [
-            {
-              "rua": "Raaa"
-            }
-          ]
-        }
-      ],
-      "id": 6
-    },
-    {
-      "nome": "Teste",
-      "cpf": "0",
-      "tel": "0",
-      "email": "suzana-teste@teste.com",
-      "endereco": {
-        "0": {
-          "rua": "rua teste"
-        }
-      },
-      "id": 7
-    },
-    {
-      "nome": "Sandra Maria",
-      "cpf": "0",
-      "tel": "0",
-      "email": "sandra@teste.com",
-      "endereco": {
+      "addAddress": {
         "0": {
           "principal-0": "true",
-          "rua": "Rua sandra",
+          "selectTipo": "residencial",
+          "rua": "rua da casa",
+          "num": "12",
+          "bairro": "Santos",
+          "cidade": "São José",
+          "uf": "SC",
+          "comp": "1"
+        },
+        "1": {
+          "principal-1": "false",
+          "rua": "Rua do trabalho",
+          "num": "30",
+          "selectTipo": "comercial",
+          "bairro": "Silva",
+          "cidade": "São José",
+          "uf": "SC",
+          "comp": "1"
+        }
+      },
+      "id": 2
+    },
+    {
+      "nome": "Marcio Almeida",
+      "cpf": "0",
+      "tel": "0",
+      "email": "marcio-teste@teste.com",
+      "addAddress": {
+        "0": {
+          "principal-0": "true",
+          "selectTipo": "residencial",
+          "rua": "Rua dois",
           "num": "12",
           "comp": "0",
           "bairro": "0",
@@ -102,26 +46,7 @@
           "uf": "SC"
         }
       },
-      "id": 10
-    },
-    {
-      "nome": "Camila Matos B",
-      "cpf": "0",
-      "tel": "0",
-      "email": "camila.mila148@gmail.com",
-      "endereco": {
-        "0": {
-          "principal-0": "true",
-          "selectTipo": "residencial",
-          "rua": "1",
-          "num": "1",
-          "comp": "1",
-          "bairro": "1",
-          "cidade": "1",
-          "uf": "1"
-        }
-      },
-      "id": 11
+      "id": 3
     }
   ]
 }
