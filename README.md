@@ -4,6 +4,10 @@ X Solar Tech é uma empresa ficticia que precisa de um sistema de gestão de seu
 
 **Telas**
 
+![Screenshot_2021-04-28 X Solar Tech](https://user-images.githubusercontent.com/63053569/116457982-776af580-a83a-11eb-9d5d-5056941f2995.png)
+
+![Screenshot_2021-04-28 X Solar Tech(1)](https://user-images.githubusercontent.com/63053569/116457987-79cd4f80-a83a-11eb-9fbe-98b0a9393899.png)
+
 ### :page_with_curl: Informações sobre o Projeto
 
 O sistema precisa que seja possivel cadastras clientes, onde cada cliente pode ter mais de um endereço em seu cadastro.
